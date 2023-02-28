@@ -1,15 +1,17 @@
-# Nikon_advance_calibration
+# Autoastro
 
-A simple R script to calibrate Nikon NEF images from astrophotography hacked Nikon DSLRs
+## NikonHacker Astrophotography Patch Calibration
+
+Use `Advanced_calibration-Nikon.ipynb` to calibrate Nikon NEF images from astrophotography hacked Nikon DSLRs
 
 Link to hack:
 http://simeonpilgrim.com/nikon-patch/nikon-patch.html
 For yet supported cameras, use USB PTP tool:
 https://nikonhacker.com/viewtopic.php?f=2&t=2319
 
-You'll need libraw unprocessed_raw to convert RAW information into TIFF. 
-unprocessed_raw -T *.NEF
+For cameras other than D5100/D7000/D600/610/D800/D800E, modify the zone definition in the script accordingnally for dummy, dark and active pixels.
 
-dcraw -4 -T -D will not work since it crops out dark pixels, which is used to facilitate accurate calibration. 
+## Alignment and Goto
 
-Modify the zone definition in the script accordingnally for dummy, dark and active pixels.
+Run `indiserver | indi_eqmod_telescope` in background.
+Use `one_star_align.sh` for alignment.
