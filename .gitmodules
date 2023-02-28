@@ -1,0 +1,6 @@
+[submodule "astrometry.net"]
+	path = astrometry.net
+	url = https://github.com/dstndstn/astrometry.net
+[submodule "phd2"]
+	path = phd2
+	url = https://github.com/jackshencn/phd2
