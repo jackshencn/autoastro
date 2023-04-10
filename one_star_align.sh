@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Turn on EQ tracking
+indi_setprop "EQMod Mount.DEVICE_PORT.PORT=/dev/ttyS4"
 indi_setprop "EQMod Mount.CONNECTION.CONNECT=On"
 indi_setprop "EQMod Mount.TELESCOPE_TRACK_STATE.TRACK_ON=On"
 indi_setprop "EQMod Mount.HORIZONLIMITSLIMITGOTO.HORIZONLIMITSLIMITGOTODISABLE=On"
